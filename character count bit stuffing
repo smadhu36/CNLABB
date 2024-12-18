@@ -1,0 +1,67 @@
+character count:
+#include<stdio.h>
+#include<string.h>
+void main(){
+    int n,i,j,k,l,total;
+    total=k=0;
+    char str[100];
+    printf("Enter a string: ");
+    scanf("%s",str);
+    printf("Enter number of frames: ");
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        printf("Enter frame %d count: ",i+1);
+        scanf("%d",&l);
+        for(j=0;j<l;j++){
+            printf("%c",str[k]);
+            k++;
+        }
+        total=total+l;
+        printf("\n");
+    }
+    if(strlen(str)!=total){
+        printf("count doesnot matter\n");
+    }
+}
+bit stuffing:
+bit stuffing:
+
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+    int a[20], b[30], i, j = 0, count = 0, n;
+    
+    printf("Enter frame length: ");
+    scanf("%d", &n);
+    
+    printf("Enter input frame (0's & 1's only): ");
+    for (i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+    
+    i = 0;
+    while (i < n) {
+        if (a[i] == 1) {
+            count++; 
+            b[j] = a[i];  
+            j++;
+
+            if (count == 5) {
+                b[j++] = 0; 
+                count = 0;   
+            }
+        } else {
+            count = 0;  
+            b[j++] = a[i];  
+        }
+        i++;
+    }
+
+    printf("After stuffing, the frame is: ");
+    for (i = 0; i < j; i++) {
+        printf("%d", b[i]);
+    }
+    getch();
+}
