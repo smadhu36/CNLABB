@@ -1,4 +1,4 @@
-[18/12/24, 5:08:36 PM] Sai Sree: #include <stdio.h>
+#include <stdio.h>
 #include <string.h>
 
 void main() {
